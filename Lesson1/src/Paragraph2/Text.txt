@@ -1,0 +1,27 @@
+1. Moveable, Stopable - Это интерфейсы и должны реализовываться с помощью interface, а в классе Lorry задается
+как "class Lorry extends Car, Moveable, Stopable".
+
+2. В классе Lorry реализованы только методы интерфейсов Moveable и Stopable.
+Класс Lorry раширяет реализацию абстрактного класс Car. А в классе Car есть абстрактный метод open() его
+надо реализовать в классе Lorry.
+@Override
+void open() {}
+
+на основе пунктов 1 и 2 класс Lorry должен выглядеть как
+class Lorry extends Car implements Moveable, Stopable{
+
+    public void move(){
+        System.out.println("Car is moving");
+    }
+
+    public void stop(){
+        System.out.println("Car is stop");
+    }
+
+    @Override
+    void open() {
+        System.out.println("Car is open");
+    }
+}
+
+3. Оптимизация в папке New
